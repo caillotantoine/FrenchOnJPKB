@@ -1,7 +1,7 @@
 # FrenchOnJPKB
 This repo hold config files to modify the French keyboard layout to make it support the Japanese keyboard. It is inspired by the available characters on Mac keyboards for scientific writing. Pull requests are welcomed to better fit everyone's need.
 
-![Layout](layout.png) 
+![Layout](layout.png)
 
 ## Install
 You need the `sudo` priviledge to continue.

@@ -1334,29 +1334,29 @@ xkb_symbols "frjp" {
     key <AE07> { [ 7, apostrophe            , egrave , Egrave 	    ] };
     key <AE08> { [ 8, parenleft             , agrave , Agrave		] };
     key <AE09> { [ 9, parenright            , ccedilla , Ccedilla 	] };
-    key <AE09> { [ 0, degree                , oslash , Ooblique	    ] };
+    key <AE10> { [ 0, degree                , oslash , Ooblique	    ] };
     key <AE11> { [ minus, equal             , notequal , U2248      ] }; // U2248
     key <AE12> { [ asciicircum,	asciitilde                          ] };
 
-    key <AD01> { [ q, Q                     , oe, OE			            ] };
+    key <AD01> { [ q, Q                     , oe, OE		            ] };
     key <AD02> { [ w, W                     , Greek_omega, Greek_OMEGA	] };
-    key <AD03> { [ e, E                     , dead_acute                ] };
+    key <AD03> { [ e, E                     , dead_acute, Greek_epsilon ] };
     key <AD04> { [ r, R                     , rightarrow , leftarrow	] };
-    key <AD05> { [ t, T                     , copyright			        ] };
-    key <AD06> { [ y, Y                      			                ] };
+    key <AD05> { [ t, T                     , copyright, U27D9	        ] };
+    key <AD06> { [ y, Y                     , yen, U2200                ] };
     key <AD07> { [ u, U                     , uparrow, downarrow		] };
-    key <AD08> { [ i, I                     , dead_diaeresis			] };
+    key <AD08> { [ i, I                     , dead_diaeresis, U2212 	] };
     key <AD09> { [ o, O                     , dead_circumflex			] };
     key <AD10> { [ p, P                     , Greek_pi, section			] };
     key <AD11> { [ at, grave                , dead_grave		        ] };
     key <AD12> { [ bracketleft,	braceleft                               ] };
 
     key <AC01> { [ a, A                     , ae, AE			        ] };
-    key <AC02> { [ s, S                                     		    ] };
+    key <AC02> { [ s, S                     , Greek_sigma, Greek_SIGMA  ] };
     key <AC03> { [ d, D                     , Greek_delta, Greek_DELTA	] };
-    key <AC04> { [ f, F                      			                ] };
-    key <AC05> { [ g, G                      			                ] };
-    key <AC06> { [ h, H                      			                ] };
+    key <AC04> { [ f, F                     , U222B		                ] };
+    key <AC05> { [ g, G                     , U2208, U2200              ] };
+    key <AC06> { [ h, H                     , U22C2, U22C3              ] };
     key <AC07> { [ j, J                      			                ] };
     key <AC08> { [ k, K                      			                ] };
     key <AC09> { [ l, L                     , bar , Greek_lamda			] };
@@ -1364,15 +1364,15 @@ xkb_symbols "frjp" {
     key <AC11> { [ colon, asterisk          , multiply	                ] };
     key <AC12> { [ bracketright, braceright                             ] };
 
-    key <AB01> { [ z, Z                     			                ] };
-    key <AB02> { [ x, X                     			                ] };
+    key <AB01> { [ z, Z                     , U2115, U211A              ] };
+    key <AB02> { [ x, X                     , U2102, U211D              ] };
     key <AB03> { [ c, C                     , ccedilla      , Ccedilla	] };
-    key <AB04> { [ v, V                     , U221A     			    ] };
-    key <AB05> { [ b, B                     			                ] };
+    key <AB04> { [ v, V                     , U221A, U2A02 	    	    ] };
+    key <AB05> { [ b, B                     , U2A00, U2A01              ] };
     key <AB06> { [ n, N                     , ntilde, Ntilde			] };
     key <AB07> { [ m, M                     , Greek_mu			        ] };
     key <AB08> { [ comma,  less             , lessthanequal		        ] };
-    key <AB09> { [ period, greater          , greaterthanequal	        ] };
+    key <AB09> { [ period, greater          , greaterthanequal, U22C5   ] };
     key <AB10> { [ slash, question          , division	                ] };
     key <AB11> { [ backslash, underscore                                ] };
     key <LCTL> { [ Control_L		                                    ] };
