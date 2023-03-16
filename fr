@@ -1380,4 +1380,6 @@ xkb_symbols "frjp" {
     key <NFER> { [ Space                                                ] };
 
     key <XFER> { [ Space                                                ] };
+    key <NMLK> { [ Num_Lock						] };
+    key <KANA> { [ Alt_R						] };
 };  
