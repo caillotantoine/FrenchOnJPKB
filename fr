@@ -1337,6 +1337,7 @@ xkb_symbols "frjp" {
     key <AE10> { [ 0, degree                , oslash , Ooblique	    ] };
     key <AE11> { [ minus, equal             , notequal , U2248      ] }; // U2248
     key <AE12> { [ asciicircum,	asciitilde                          ] };
+    key <AE13> { [ yen, bar                                         ] };
 
     key <AD01> { [ q, Q                     , oe, OE		            ] };
     key <AD02> { [ w, W                     , Greek_omega, Greek_OMEGA	] };
