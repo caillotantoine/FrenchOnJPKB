@@ -14,7 +14,20 @@ You need the `sudo` priviledge to continue.
 
 ```bash
 sudo cp /usr/share/X11/xkb/symbols/fr /usr/share/X11/xkb/symbols/fr_bak
-sudo cp /usr/share/X11/xkb/symbols/evdev.xml /usr/share/X11/xkb/symbols/evdev_bak.xml
+sudo cp /usr/share/X11/xkb/rules/evdev.xml /usr/share/X11/xkb/rules/evdev_bak.xml
 sudo cp ./fr /usr/share/X11/xkb/symbols/fr
-sudo cp ./evdev.xml /usr/share/X11/xkb/symbols/evdev.xml
+sudo cp ./evdev.xml /usr/share/X11/xkb/rules/evdev.xml
 ```
+
+## Transform the Henkan Mode Key into the Right Alt Key
+
+Install the [input-remapper](https://github.com/sezanzeb/input-remapper) tool:
+```bash
+sudo apt update && sudo apt install input-remapper
+```
+
+Change the Henkan Mode key to `KEY_RIGHTALT`
+
+Apply the settings.
+
+(Source [remap keys ubuntu 22.04](https://fostips.com/remap-keys-ubuntu-22-04/))
