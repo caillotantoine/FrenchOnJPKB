@@ -19,6 +19,9 @@ sudo cp ./fr /usr/share/X11/xkb/symbols/fr
 sudo cp ./evdev.xml /usr/share/X11/xkb/rules/evdev.xml
 ```
 
+### IBus
+I modified the file `simple.xml` in `/usr/share/ibus/component/simple.xml`. 
+
 ## Transform the Henkan Mode Key into the Right Alt Key
 
 Install the [input-remapper](https://github.com/sezanzeb/input-remapper) tool:
