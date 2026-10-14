@@ -1,0 +1,69 @@
+// FrenchOnJPKB: Ziyoulang K68 ANSI/QWERTY French + macOS-style accents.
+// Independent XKB layout: it does not require Japanese-specific keys.
+// Right Alt (AltGr) is the third level; Right Alt + Shift is the fourth.
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+    include "us(basic)"
+    include "level3(ralt_switch)"
+
+    name[Group1] = "French (K68, Mac-style accents)";
+
+    // Numbers and punctuation remain normal US QWERTY on levels 1/2.
+    // Convenience French letters follow the earlier frjp layout on 3/7/8/9.
+    key <TLDE> { [ grave, asciitilde, dead_grave, dead_grave ] };
+    key <AE01> { [ 1, exclam, exclamdown, onesuperior ] };
+    key <AE02> { [ 2, at, EuroSign, EuroSign ] };
+    key <AE03> { [ 3, numbersign, eacute, Eacute ] };
+    key <AE04> { [ 4, dollar, sterling, yen ] };
+    key <AE05> { [ 5, percent, U221E, U221E ] };
+    key <AE06> { [ 6, asciicircum, U222B, U222C ] };
+    key <AE07> { [ 7, ampersand, egrave, Egrave ] };
+    key <AE08> { [ 8, asterisk, agrave, Agrave ] };
+    key <AE09> { [ 9, parenleft, ccedilla, Ccedilla ] };
+    key <AE10> { [ 0, parenright, oslash, Ooblique ] };
+    key <AE11> { [ minus, underscore, dead_grave, notequal ] }; // no dedicated grave key on K68
+    key <AE12> { [ equal, plus, plusminus, U2265 ] };
+
+    // macOS-like accent sequences: AltGr+e then e = é, AltGr+i then e = ê,
+    // AltGr+u then e = ë, AltGr+- then e = è, AltGr+n then n = ñ.
+    // The K68 can generate the missing grave key with Fn+Esc, if desired.
+    key <AD01> { [ q, Q, oe, OE ] };
+    key <AD02> { [ w, W, Greek_omega, Greek_OMEGA ] };
+    key <AD03> { [ e, E, dead_acute, dead_acute ] };
+    key <AD04> { [ r, R, rightarrow, leftarrow ] };
+    key <AD05> { [ t, T, copyright, registered ] };
+    key <AD06> { [ y, Y, yen, U2200 ] };
+    key <AD07> { [ u, U, dead_diaeresis, dead_diaeresis ] };
+    key <AD08> { [ i, I, dead_circumflex, dead_circumflex ] };
+    key <AD09> { [ o, O, oslash, Ooblique ] };
+    key <AD10> { [ p, P, Greek_pi, Greek_PI ] };
+    key <AD11> { [ bracketleft, braceleft, guillemotleft, leftdoublequotemark ] };
+    key <AD12> { [ bracketright, braceright, guillemotright, rightdoublequotemark ] };
+
+    key <AC01> { [ a, A, ae, AE ] };
+    key <AC02> { [ s, S, Greek_sigma, Greek_SIGMA ] };
+    key <AC03> { [ d, D, Greek_delta, Greek_DELTA ] };
+    key <AC04> { [ f, F, U222B, U222C ] };
+    key <AC05> { [ g, G, U2208, U2209 ] };
+    key <AC06> { [ h, H, U2229, U222A ] };
+    key <AC07> { [ j, J, notequal, U2248 ] };
+    key <AC08> { [ k, K, lessthanequal, greaterthanequal ] };
+    key <AC09> { [ l, L, bar, Greek_LAMBDA ] };
+    key <AC10> { [ semicolon, colon, plusminus, multiply ] };
+    key <AC11> { [ apostrophe, quotedbl, dead_acute, dead_acute ] };
+
+    key <AB01> { [ z, Z, U2115, U211A ] };
+    key <AB02> { [ x, X, U2102, U211D ] };
+    key <AB03> { [ c, C, ccedilla, Ccedilla ] };
+    key <AB04> { [ v, V, U221A, U2A02 ] };
+    key <AB05> { [ b, B, U2A00, U2A01 ] };
+    key <AB06> { [ n, N, dead_tilde, dead_tilde ] };
+    key <AB07> { [ m, M, Greek_mu, Greek_MU ] };
+    key <AB08> { [ comma, less, lessthanequal, lessthanequal ] };
+    key <AB09> { [ period, greater, greaterthanequal, U22C5 ] };
+    key <AB10> { [ slash, question, division, questiondown ] };
+    key <BKSL> { [ backslash, bar, yen, U00A6 ] };
+
+    // Normal space, non-breaking space, narrow non-breaking space.
+    key <SPCE> { [ space, space, nobreakspace, U202F ] };
+};
