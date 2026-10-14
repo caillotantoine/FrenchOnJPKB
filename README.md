@@ -1,3 +1,5 @@
+> **Ziyoulang K68 / Ubuntu users:** see [the new K68 installation guide](README-K68.md) on the `feature/ubuntu-k68-mac-french` branch. It installs a separate layout instead of replacing entire system XKB files.
+
 # FrenchOnJPKB
 This repo hold config files to modify the French keyboard layout to make it support the Japanese keyboard. It is inspired by the available characters on Mac keyboards for scientific writing. Pull requests are welcomed to better fit everyone's need.
 
