@@ -17,7 +17,7 @@ Run these commands in a terminal:
 
 **Important:** run the last command as your normal GNOME desktop user, **without sudo**. Switch to the new layout with **Super+Space**, or choose it under **Settings → Keyboard → Input Sources**. If it is missing or inactive, **log out and log back in**. The activation script *appends* a source; it **does not remove** any existing US, French, Japanese/Mozc or IBus inputs.
 
-The installer compiles the layout first, then adds a standalone file at /usr/share/X11/xkb/symbols/frk68 and a small marked registration block to /usr/share/X11/xkb/rules/evdev.xml. It does **not** overwrite the installed French symbols file, replace Ubuntu's entire registry, modify IBus files, or install input-remapper.
+The installer explicitly launches its validation script with `bash` and does not depend on executable permissions. A former version failed with `tests/check-layout.sh: Permission denied`; if you saw that error, run `git pull` and retry `bash scripts/install-ubuntu.sh`. The installer compiles the layout first, then adds a standalone file at /usr/share/X11/xkb/symbols/frk68 and a small marked registration block to /usr/share/X11/xkb/rules/evdev.xml. It does **not** overwrite the installed French symbols file, replace Ubuntu's entire registry, modify IBus files, or install input-remapper.
 
 If neither xkbcli nor xkbcomp is available, install the validator with:
 

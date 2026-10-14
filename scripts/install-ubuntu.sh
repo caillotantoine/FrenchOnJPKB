@@ -2,7 +2,7 @@
 # Ubuntu: validate the source before changing system XKB data.
 set -euo pipefail
 repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-"$repo_dir/tests/check-layout.sh"
+bash "$repo_dir/tests/check-layout.sh"
 if (( EUID == 0 )); then
     python3 "$repo_dir/scripts/xkb_registry.py" install
 else
