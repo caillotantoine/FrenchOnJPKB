@@ -25,8 +25,9 @@ xkb_symbols "basic" {
     key <AE12> { [ equal, plus, plusminus, U2265 ] };
 
     // macOS-like accent sequences: AltGr+e then e = é, AltGr+i then e = ê,
-    // AltGr+u then e = ë, AltGr+- then e = è, AltGr+n then n = ñ.
-    // The K68 can generate the missing grave key with Fn+Esc, if desired.
+    // AltGr+u then e = ë, AltGr+- then e = è.
+    // AltGr+n is dead_tilde: release Right Alt, then n => ñ, N => Ñ,
+    // a => ã, o => õ, Space => a standalone "~". No Fn+Esc required.
     key <AD01> { [ q, Q, oe, OE ] };
     key <AD02> { [ w, W, Greek_omega, Greek_OMEGA ] };
     key <AD03> { [ e, E, dead_acute, dead_acute ] };

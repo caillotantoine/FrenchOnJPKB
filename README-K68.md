@@ -39,6 +39,10 @@ Right Alt acts like a macOS Option modifier. A **dead key** is pressed and relea
 | Right Alt + U, then E | ë |
 | Right Alt + -, then E | è |
 | Right Alt + N, then N | ñ |
+| Right Alt + N, then Shift + N | Ñ |
+| Right Alt + N, then A | ã |
+| Right Alt + N, then O | õ |
+| Right Alt + N, then Space | ~ |
 | Right Alt + [; Right Alt + ] | «; » |
 | Right Alt + Space | Nonbreaking space |
 | Right Alt + P; M; F; D | π; μ; ∫; δ |
@@ -46,7 +50,11 @@ Right Alt acts like a macOS Option modifier. A **dead key** is pressed and relea
 | Right Alt + Z; X; Shift+X | ℕ; ℂ; ℝ |
 | Right Alt + K; Shift+K | ≤; ≥ |
 
-Note: on this compact K68 keyboard, the normal backtick/grave key is **Fn+Esc**, and tilde is typically **Fn+Shift+Esc**. To avoid needing a three-key chord for the grave dead key, the custom layout assigns **Right Alt + -** (then e gives è). Some K68 firmware can also produce the grave key using Fn+Esc, which keeps Right Alt + grave usable.
+**For the tilde:** press **Right Alt + N**, release both keys, then press **N**, **Shift + N**, **A**, **O**, or **Space**. The Space sequence prints a literal `~`. Press normal **Space**, not Right Alt + Space (which produces a non-breaking space). You never need Fn + Esc to type a tilde with this layout.
+
+**Why Right Alt only?** Right Alt is the layout's AltGr/Option-like character modifier. Left Alt remains a normal desktop/application modifier, retaining Alt + Tab, Alt + F4, Alt + Left/Right, menu shortcuts, etc. Remapping it as AltGr would interfere with those shortcuts. The left/right distinction is intentional and can be revisited if you prefer to reorganize Ubuntu's shortcuts.
+
+On this compact K68, the physical backtick/grave key is typically **Fn+Esc** (tilde typically **Fn+Shift+Esc**). To avoid that awkward chord for a grave accent, use **Right Alt + -**, then e for è. The custom layout also retains a dead grave on Right Alt + physical backtick for keyboards that have that key.
 
 The base keys stay US QWERTY: ordinary numbers, apostrophe, punctuation and Ctrl shortcuts. Other scientific symbols from the original layout are available in the third and fourth levels; see [layouts/frk68](layouts/frk68).
 
@@ -57,7 +65,7 @@ The base keys stay US QWERTY: ordinary numbers, apostrophe, punctuation and Ctrl
     echo "$XDG_SESSION_TYPE"
     gsettings get org.gnome.desktop.input-sources sources
 
-The first command compiles the keymap without modifying the machine. The second exercises install/uninstall logic against a temporary directory.
+The first command compiles the keymap without modifying the machine. The Python tests exercise install/uninstall logic against a temporary directory and verify the tilde dead-key mapping and UTF-8 compositions using libxkbcommon.
 
 Try typing in a text editor:
 
