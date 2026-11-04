@@ -1378,7 +1378,8 @@ xkb_symbols "frjp" {
     key <AB11> { [ backslash, underscore                                ] };
     key <LCTL> { [ Control_L		                                    ] };
 
-    // Modern evdev keycodes for Japanese conversion keys (K295 / JIS 109).\n    key <MUHE> { [ Space                                                ] };
+    // Modern evdev keycodes for Japanese conversion keys (K295 / JIS 109).
+    key <MUHE> { [ Space                                                ] };
 
     key <HENK> { [ Space                                                ] };
     key <NMLK> { [ Num_Lock						] };
