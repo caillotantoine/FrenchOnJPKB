@@ -13,7 +13,7 @@ spec.loader.exec_module(mod)
 class LayoutTests(unittest.TestCase):
     def test_short_spacebar_and_altgr(self):
         source = mod.source_variant()
-        for key in ("NFER", "XFER"):
+        for key in ("MUHE", "HENK"):
             self.assertRegex(source, rf'key <{key}>\s*\{{\s*\[\s*Space\s*\]')
         self.assertRegex(source, r'key <KANA>\s*\{\s*\[\s*Alt_R')
         self.assertIn('include "level3(ralt_switch)"', source)
