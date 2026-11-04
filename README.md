@@ -6,7 +6,7 @@ A French/English QWERTY layout for **Japanese JIS keyboards**, with accents, lig
 
 ## Important: Japanese space keys
 
-**無変換 (Muhenkan) and 変換 (Henkan) both produce Space.** This is intentional: they act as extensions of the short JIS spacebar and should **not** be remapped to AltGr. The カタカナ/ひらがな (Kana) key acts as right Alt (AltGr) in this layout. This means the layout does not preserve Kana's default IME switching role: configure an alternative Japanese input-method shortcut if you need one.
+**無変換 (Muhenkan, XKB `<MUHE>`) and 変換 (Henkan, XKB `<HENK>`) both produce Space.** This is intentional: they act as extensions of the short JIS spacebar and should **not** be remapped to AltGr. The カタカナ/ひらがな (Kana) key acts as right Alt (AltGr) in this layout. This means the layout does not preserve Kana's default IME switching role: configure an alternative Japanese input-method shortcut if you need one.
 
 The existing shortcuts and scientific symbols have been preserved; see the `frjp` variant in the `fr` source and the diagram above. Note that actual physical key positions may differ slightly between JIS keyboard models, including the Logicool K295.
 
@@ -42,7 +42,7 @@ The installer creates `.frenchonjp.bak` snapshots alongside the two modified sys
 
 ## How to check physical keys
 
-On Wayland, install `libinput-tools`, then run `sudo libinput debug-events --show-keycodes` to confirm key events while pressing Muhenkan, Henkan and Kana. On X11, `xev` may be useful instead. These physical keys should be tested on the actual keyboard before adjusting the mapping.
+Modern evdev keymaps use `<MUHE>` and `<HENK>` for these keys. The older `<NFER>` and `<XFER>` names are not the right mapping for modern Ubuntu. If updating an existing installation, pull the latest files and rerun `sudo python3 install.py install`, then log out and back in.\n\nOn Wayland, install `libinput-tools`, then run `sudo libinput debug-events --show-keycodes` to confirm key events while pressing Muhenkan, Henkan and Kana. On X11, `xev` may be useful instead. These physical keys should be tested on the actual keyboard before adjusting the mapping.
 
 ## Legacy
 
